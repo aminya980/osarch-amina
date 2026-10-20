@@ -1,0 +1,6 @@
+﻿
+Model                           MediaType             InterfaceType
+-----                           ---------             -------------
+WD PC SN5000S SDEQNSJ-512G-1002 Fixed hard disk media SCSI         
+
+
