@@ -1,7 +1,6 @@
-﻿
-  Capacity Speed Manufacturer      DeviceLocator             
-  -------- ----- ------------      -------------             
-8589934592  3200 Micron Technology Controller0-ChannelA      
+﻿PS C:\Users\Asus\Desktop\Новая папка\osarch-amina> Get-CimInstance -ClassName Win32_PhysicalMemory
+
+Capacity   Speed Manufacturer      DeviceLocator
+--------   ----- ------------      -------------
+8589934592  3200 Micron Technology Controller0-ChannelA
 8589934592  3200 SK Hynix          Controller1-ChannelA-DIMM0
-
-
