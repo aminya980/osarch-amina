@@ -1,6 +1,11 @@
-﻿
-Model                           MediaType             InterfaceType
------                           ---------             -------------
-WD PC SN5000S SDEQNSJ-512G-1002 Fixed hard disk media SCSI         
+﻿PS C:\Users\Asus\Desktop\Новая папка\osarch-amina> Get-PhysicalDisk | Select-Object FriendlyName, MediaType, BusType
 
+FriendlyName                    MediaType BusType
+------------                    --------- -------
+WD PC SN5000S SDEQNSJ-512G-1002 SSD       NVMe  
 
+PS C:\Users\Asus\Desktop\Новая папка\osarch-amina> Get-Volume C
+
+DriveLetter FriendlyName FileSystemType DriveType HealthStatus OperationalStatus SizeRemaining      Size
+----------- ------------ -------------- --------- ------------ ----------------- -------------      ----
+C                        NTFS           Fixed     Healthy      OK                    354.58 GB 476.21 GB
