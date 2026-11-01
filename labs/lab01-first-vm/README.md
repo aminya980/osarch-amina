@@ -29,7 +29,10 @@ The VM boots; the break-and-rollback cycle is shown in the evidence below.
 
 ## What did not work the first time
 Two times in the terminal I wrote my username instead of writing my login. That created a lot of struggle in line "ssh aminam@192.168.252.131 "lsb_release -a" > labs/lab01-first-vm/evidence/guest-release.txt". There's also were isssues because of the "*."yam1" in the step where we show how the break works.
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9460ccb (Lab 2: Windows guest, network both ways, overcommitment)
 
 ## Evidence
 - [evidence/vm-settings.png](evidence/vm-settings.png) — CPU, memory and disk as configured
