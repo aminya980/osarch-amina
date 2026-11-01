@@ -14,6 +14,7 @@ New-NetFirewallRule -DisplayName "Allow ping in (ICMPv4)" -Protocol ICMPv4 -Icmp
 5. Overcommitment: set 9.9 GB + 9.9 GB on a 16 GB host.
 
 ## Network diagram
+```
               Internet
                  |
       Host laptop 192.168.1.12 (Wi-Fi)
@@ -22,6 +23,7 @@ New-NetFirewallRule -DisplayName "Allow ping in (ICMPv4)" -Protocol ICMPv4 -Icmp
           /                        \
 lab01-ubuntu                  lab02-windows
 192.168.252.131                192.168.252.132
+```
 
 ## Result
 | | Before | After |
