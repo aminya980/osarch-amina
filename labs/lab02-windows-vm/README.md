@@ -35,6 +35,7 @@ lab01-ubuntu                  lab02-windows
 
 ## What did not work the first time
 At first I just created ip-addr-linux.txt file manually, without using terminal and the 'ssh aminam@192.168.252.131 "ip addr" > labs/lab02-windows-vm/evidence/ip-addr-linux.txt' line, which didn't put information right into it and gave me the same error: "couldn't find this file" or "it already exists" when I tried to find it after.
+Also used wrong ip 192.168.252.131 when pinging Ubuntu to Windows, which is Ubuntu's own address, so the Linux → Windows direction was not shown at first.
 
 ## Evidence
 - [evidence/ipconfig-windows.txt](evidence/ipconfig-windows.txt) — Windows address
