@@ -2,6 +2,8 @@
 
 Pair: Amina Marlenkyzy · Date: 08.11.2026
 
+## Part 1 — Ten parts
+
 ### AMD Ryzen 5 7600
 ![AMD Ryzen 5 7600](evidence/photos/ryzen5-7600.png)
 
@@ -57,7 +59,7 @@ ATX power supply, **750 W**, **Cybenetics Gold** efficiency, **ATX 3.1**, **full
 — Source: https://www.corsair.com/ww/en/p/psu/cp-9020295-na/rme-series-rm750e-fully-modular-low-noise-atx-power-supply-cp-9020295-na
 
 ### Stock cooler — AMD Wraith Stealth
-![AMD Wraith Stealth](evidence/photos/amd-wraith-stealth.png)
+![AMD Ryzen 5 7600 spec page — "Thermal Solution (PIB): AMD Wraith Stealth"](evidence/photos/ryzen5-7600.png)
 
 Small air cooler that ships **in the box with the Ryzen 5 7600** (AMD lists it as "Thermal Solution (PIB): AMD Wraith Stealth"). **Connects to:** socket **AM5** (AM4/AM5 mounting). **Limit:** made for ~65 W processors. It won't mount on Intel LGA1700. The i5-13400 page lists no cooler, so this is the only stock cooler in the list.
 — Source: https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-5-7600.html
@@ -106,13 +108,36 @@ What each build still needs to switch on:
 - *Optional:* a second stick of memory for each build, to get dual channel.
 
 ## Part 2 — Same facts, three operating systems
-<the table>
-<2–3 sentences: how the names differ; what the VM showed>
+
+Host: ASUS Vivobook 16X, Windows 11. Linux: Ubuntu Server VM in VMware Workstation, running on the same laptop. macOS: no Mac available.
+
+| Fact | Windows (PowerShell) — host | Linux (Ubuntu VM) | macOS |
+|---|---|---|---|
+| CPU model | `Get-CimInstance Win32_Processor` → **13th Gen Intel Core i5-13420H** | `lscpu` → Model name: **13th Gen Intel Core i5-13420H**, Hypervisor vendor: **VMware** | not available (no Mac) |
+| Cores / threads | same command → **8 cores / 12 logical processors** | `lscpu` → **CPU(s): 2** (2 sockets × 1 core × 1 thread) | not available |
+| Total memory | `Get-CimInstance Win32_PhysicalMemory` → 2 × 8589934592 bytes = **16 GB** | `free -h` → Mem total: **3.3 Gi** | not available |
+| Memory modules and speed | same command → **2 modules × 8 GB, 3200 MT/s**, SMBIOSMemoryType 26 = **DDR4**, FormFactor 12 = **SO-DIMM** | `sudo dmidecode -t memory` → one **4 GB** module "RAM slot #0", Type: DRAM, **Speed: Unknown**, Manufacturer: Not Specified, plus dozens of empty virtual slots ("No Module Installed") | not available |
+| Disk model and type | `Get-PhysicalDisk` → **WD PC SN5000S 512 GB, SSD, NVMe** | `lsblk -d -o NAME,MODEL,ROTA,TRAN,SIZE` → sda **VMware Virtual S, 25 G**, ROTA 1 (reported as spinning), TRAN spi | not available |
+| Free space | `Get-Volume C` → **280.69 GB free of 476.21 GB** | `df -h /` → **5.7 G free of 12 G** | not available |
+| Architecture | `$env:PROCESSOR_ARCHITECTURE` → **AMD64** | `uname -m` → **x86_64** | not available |
+
+**How the names differ:** the same thing gets different names on each system. Windows says **AMD64** and Linux says **x86_64**, both meaning x86-64. Windows counts "logical processors" where Linux prints "CPU(s)" split into sockets, cores and threads. Windows gives memory as raw bytes and code numbers (26 = DDR4, 12 = SO-DIMM), while Linux prints readable sizes (3.3Gi, 25G).
+
+**What the VM showed differently from the host:** the hypervisor **passed through** the real CPU model name (i5-13420H) and the architecture. It **hid** everything else:
+- Linux sees only the **2 vCPUs** and **~4 GB RAM** we gave the VM, not 12 threads and 16 GB.
+- `dmidecode` shows a fake memory module with **Speed: Unknown** and no DDR type, instead of our two DDR4-3200 SO-DIMMs.
+- The NVMe SSD appears as a 25 GB **"VMware Virtual S"** disk that even reports itself as rotating (ROTA 1).
 
 ## What did not work the first time
 We first used the Crucial page for **CT16G4SFRA32A**. Its spec table said **Module Type: SODIMM**: a 260-pin laptop module that would not fit the MSI desktop board. The lab asks for a DIMM, so we switched to **CT16G4DFRA32A**, whose page says **Module Type: UDIMM**: the 288-pin desktop module that fits the board's DDR4 slots. The only difference in the part number is **SF** (SO-DIMM) versus **DF** (desktop).
 
+We also hit three command-line problems in Part 2:
+- **PowerShell saved almost nothing.** We pasted all five commands with `| Out-File ...` only on the last line, so only `AMD64` went into the file and the rest printed to the screen. `Out-File` only applies to the command on its own line, so we added it to every command.
+- **Bash showed `>` and did nothing.** We typed `{ echo '$ df -h /'; df -h /; echo }` without `;` before `}`, so bash waited for the block to close. We pressed Ctrl+C and retyped it with `echo; }`.
+- **We couldn't push from the VM.** `git commit` in the VM failed with "Author identity unknown", and we couldn't paste a GitHub token into the VM console. Instead we copied the file to Windows with `scp aminam@<VM IP>:.../linux-specs.txt evidence\` and committed it from the host.
+
 ## Evidence
 - evidence/photos/ — product photos or screenshots from each maker's page
-- evidence/windows-specs.txt — <command(s) used on the Vivobook host>
-- evidence/linux-specs.txt — <command(s) used in the Ubuntu VM>
+- evidence/windows-specs.txt — the 5 PowerShell commands and their output on the Vivobook 16X host (CPU, memory, disk, C: volume, architecture)
+- evidence/linux-specs.txt — the 6 commands and their output in the Ubuntu VM (lscpu, free -h, dmidecode -t memory, lsblk, df -h /, uname -m)
+- macOS — not included, because we have no Mac
