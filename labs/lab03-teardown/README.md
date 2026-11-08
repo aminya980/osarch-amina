@@ -75,7 +75,7 @@ Small air cooler that ships **in the box with the Ryzen 5 7600** (AMD lists it a
 | M.2 slots | 2 (PCIe 5.0 x4 + PCIe 4.0 x4) | 2 (PCIe 4.0 x4 + PCIe 4.0 x4/SATA) |
 | SATA ports | 4 × SATA 6 Gb/s | 4 × SATA 6 Gb/s |
 | Processors accepted | AMD Ryzen 7000 / 8000 / 9000 | Intel Core 12th / 13th / 14th gen |
-| BIOS update needed? | <check the CPU Support list> | <check the CPU Support list> |
+| BIOS update needed? | Ryzen 5 7600: validated since BIOS **0602**, so any board sold today already has it. Ryzen 9000 needs BIOS **2613** or newer. | i5-13400: supported since BIOS **7D99v10**, the first one, so no update needed. |
 
 ## Two builds
 
