@@ -15,15 +15,21 @@ Terminal (cat in Git Bash): Instead of the normal kazakh or russian letters ther
 - BOM: no — because the file starts with 49 44 ("ID"), not EF BB BF / FF FE / FE FF
 - Separator: ;
 
-**BOM**: add it. Excel on Windows only recognises UTF-8 on double-click when the file starts with a BOM.
-**Line ending**: keep CRLF. The original is already CRLF, the users open it in Excel on Windows, and LibreOffice and cat read CRLF fine.
-**Separator**: keep ;. Excel in Russian locale expects ;, which is why the columns were already split correctly.
-
 ## Fix
-<the command or scripts/fix.sh, in a code block>
+## Fix
+`scripts/fix.sh`, run from `labs/lab05-encoding/` with `sh scripts/fix.sh`:
+
+`sh
+iconv -f RK1048 -t UTF-8 evidence/staff-broken.csv > evidence/staff-fixed.csv
+printf '\357\273\277' | cat - evidence/staff-fixed.csv > tmp && mv tmp evidence/staff-fixed.csv`
+
 
 ## Verification
-<file-after.txt summary; the screenshot evidence/opens-correctly.png>
+- `file` now says: Unicode text, UTF-8 (with BOM) text, with CRLF line terminators (evidence/file-after.txt)
+- The hex starts with `EF BB BF` (BOM), then `49 44 3B` (`ID;`); Cyrillic letters are now two bytes (Ф = `D0 A4`, before it was the single byte `D4`).
+- Excel (double-click), LibreOffice Calc (UTF-8, `;`) and `cat` in Git Bash all show every name correctly, including Kazakh letters (Ә, Қ, Ұ, Ө):
+
+![Opens correctly in Excel, LibreOffice and Git Bash](evidence/opens-correctly.png)
 
 ## What did not work the first time
-<at least one real thing>
+When copying and pasting from the terminal into Git Bash it added `[200~` before `cd`, so `cd` failed and the next command couldn't find `evidence/`. I typed everything by hand instead, copying always created the `[200~` thing.
