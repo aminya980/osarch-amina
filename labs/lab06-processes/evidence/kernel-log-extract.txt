@@ -1,0 +1,195 @@
+Nov 23 18:19:39 lab01-amina kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 23 18:19:39 lab01-amina kernel: CPU: 0 UID: 1000 PID: 12811 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 23 18:19:39 lab01-amina kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 23 18:19:39 lab01-amina kernel: Call Trace:
+Nov 23 18:19:39 lab01-amina kernel:  <TASK>
+Nov 23 18:19:39 lab01-amina kernel:  show_stack+0x49/0x60
+Nov 23 18:19:39 lab01-amina kernel:  dump_stack_lvl+0x5f/0x90
+Nov 23 18:19:39 lab01-amina kernel:  dump_stack+0x10/0x18
+Nov 23 18:19:39 lab01-amina kernel:  dump_header+0x48/0x1c7
+--
+Nov 23 18:19:39 lab01-amina kernel: [  12811]  1000 12811   765311   178099   177952      130        17  4235264   339633          1000 stress-ng-vm
+Nov 23 18:19:39 lab01-amina kernel: [  12812]  1000 12812   765311   590474   590340      130         4  6107136   161229          1000 stress-ng-vm
+Nov 23 18:19:39 lab01-amina kernel: [  12816]  1000 12816     4413      920      218      702         0    73728       97             0 sleep
+Nov 23 18:19:39 lab01-amina kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=12812,uid=1000
+Nov 23 18:19:39 lab01-amina kernel: Out of memory: Killed process 12812 (stress-ng-vm) total-vm:3061244kB, anon-rss:2361360kB, file-rss:520kB, shmem-rss:16kB, UID:1000 pgtables:5964kB oom_score_adj:1000
+Nov 23 18:19:43 lab01-amina kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 23 18:19:43 lab01-amina kernel: CPU: 0 UID: 1000 PID: 12811 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 23 18:19:43 lab01-amina kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 23 18:19:43 lab01-amina kernel: Call Trace:
+Nov 23 18:19:43 lab01-amina kernel:  <TASK>
+Nov 23 18:19:43 lab01-amina kernel:  show_stack+0x49/0x60
+Nov 23 18:19:43 lab01-amina kernel:  dump_stack_lvl+0x5f/0x90
+Nov 23 18:19:43 lab01-amina kernel:  dump_stack+0x10/0x18
+Nov 23 18:19:43 lab01-amina kernel:  dump_header+0x48/0x1c7
+--
+Nov 23 18:19:43 lab01-amina kernel: [  12811]  1000 12811   765311   260634   260504      130         0  6107136   491065          1000 stress-ng-vm
+Nov 23 18:19:43 lab01-amina kernel: [  12818]  1000 12818   765311   509119   508989      130         0  6107136     9697          1000 stress-ng-vm
+Nov 23 18:19:43 lab01-amina kernel: [  12822]  1000 12822     4413      864      172      692         0    77824      141             0 sleep
+Nov 23 18:19:43 lab01-amina kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=12811,uid=1000
+Nov 23 18:19:43 lab01-amina kernel: Out of memory: Killed process 12811 (stress-ng-vm) total-vm:3061244kB, anon-rss:1042016kB, file-rss:520kB, shmem-rss:0kB, UID:1000 pgtables:5964kB oom_score_adj:1000
+Nov 23 18:19:49 lab01-amina kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 23 18:19:49 lab01-amina kernel: CPU: 0 UID: 1000 PID: 12823 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 23 18:19:49 lab01-amina kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 23 18:19:49 lab01-amina kernel: Call Trace:
+Nov 23 18:19:49 lab01-amina kernel:  <TASK>
+Nov 23 18:19:49 lab01-amina kernel:  show_stack+0x49/0x60
+Nov 23 18:19:49 lab01-amina kernel:  dump_stack_lvl+0x5f/0x90
+Nov 23 18:19:49 lab01-amina kernel:  dump_stack+0x10/0x18
+Nov 23 18:19:49 lab01-amina kernel:  dump_header+0x48/0x1c7
+--
+Nov 23 18:19:49 lab01-amina kernel: [  12823]  1000 12823   765311   369114   368984      130         0  4149248   137849          1000 stress-ng-vm
+Nov 23 18:19:49 lab01-amina kernel: [  12828]  1000 12828     4413     1022      316      706         0    73728        0             0 sleep
+Nov 23 18:19:49 lab01-amina kernel: [  12829]     0 12829    10653      779      433      346         0    90112     1385             0 (udev-worker)
+Nov 23 18:19:49 lab01-amina kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=12818,uid=1000
+Nov 23 18:19:49 lab01-amina kernel: Out of memory: Killed process 12818 (stress-ng-vm) total-vm:3061244kB, anon-rss:1546912kB, file-rss:520kB, shmem-rss:0kB, UID:1000 pgtables:5964kB oom_score_adj:1000
+Nov 23 18:19:54 lab01-amina kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 23 18:19:54 lab01-amina kernel: CPU: 1 UID: 1000 PID: 12823 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 23 18:19:54 lab01-amina kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 23 18:19:54 lab01-amina kernel: Call Trace:
+Nov 23 18:19:54 lab01-amina kernel:  <TASK>
+Nov 23 18:19:54 lab01-amina kernel:  show_stack+0x49/0x60
+Nov 23 18:19:54 lab01-amina kernel:  dump_stack_lvl+0x5f/0x90
+Nov 23 18:19:54 lab01-amina kernel:  dump_stack+0x10/0x18
+Nov 23 18:19:54 lab01-amina kernel:  dump_header+0x48/0x1c7
+--
+Nov 23 18:19:54 lab01-amina kernel: [  12830]  1000 12830   765311   374935   374805      130         0  6107136   135244          1000 stress-ng-vm
+Nov 23 18:19:54 lab01-amina kernel: [  12835]     0 12835    10653      776      430      346         0    90112     1388             0 (udev-worker)
+Nov 23 18:19:54 lab01-amina kernel: [  12837]  1000 12837     4413     1022      310      712         0    81920        5             0 sleep
+Nov 23 18:19:54 lab01-amina kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=12823,uid=1000
+Nov 23 18:19:54 lab01-amina kernel: Out of memory: Killed process 12823 (stress-ng-vm) total-vm:3061244kB, anon-rss:1536856kB, file-rss:520kB, shmem-rss:0kB, UID:1000 pgtables:5964kB oom_score_adj:1000
+Nov 23 18:20:07 lab01-amina kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 23 18:20:07 lab01-amina kernel: CPU: 0 UID: 1000 PID: 12838 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 23 18:20:07 lab01-amina kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 23 18:20:07 lab01-amina kernel: Call Trace:
+Nov 23 18:20:07 lab01-amina kernel:  <TASK>
+Nov 23 18:20:07 lab01-amina kernel:  show_stack+0x49/0x60
+Nov 23 18:20:07 lab01-amina kernel:  dump_stack_lvl+0x5f/0x90
+Nov 23 18:20:07 lab01-amina kernel:  dump_stack+0x10/0x18
+Nov 23 18:20:07 lab01-amina kernel:  dump_header+0x48/0x1c7
+--
+Nov 23 18:20:07 lab01-amina kernel: [  12810]  1000 12810    14119      321        1      320         0    77824      376             0 stress-ng-vm
+Nov 23 18:20:07 lab01-amina kernel: [  12830]  1000 12830   765311   480061   479931      130         0  6107136   271638          1000 stress-ng-vm
+Nov 23 18:20:07 lab01-amina kernel: [  12838]  1000 12838   765311   249198   249068      130         0  3923968   229605          1000 stress-ng-vm
+Nov 23 18:20:07 lab01-amina kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=12830,uid=1000
+Nov 23 18:20:07 lab01-amina kernel: Out of memory: Killed process 12830 (stress-ng-vm) total-vm:3061244kB, anon-rss:1919724kB, file-rss:520kB, shmem-rss:0kB, UID:1000 pgtables:5964kB oom_score_adj:1000
+Nov 23 18:20:11 lab01-amina kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 23 18:20:11 lab01-amina kernel: CPU: 0 UID: 1000 PID: 12848 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 23 18:20:11 lab01-amina kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 23 18:20:11 lab01-amina kernel: Call Trace:
+Nov 23 18:20:11 lab01-amina kernel:  <TASK>
+Nov 23 18:20:11 lab01-amina kernel:  show_stack+0x49/0x60
+Nov 23 18:20:11 lab01-amina kernel:  dump_stack_lvl+0x5f/0x90
+Nov 23 18:20:11 lab01-amina kernel:  dump_stack+0x10/0x18
+Nov 23 18:20:11 lab01-amina kernel:  dump_header+0x48/0x1c7
+--
+Nov 23 18:20:11 lab01-amina kernel: [  12810]  1000 12810    14119      329        9      320         0    77824      368             0 stress-ng-vm
+Nov 23 18:20:11 lab01-amina kernel: [  12838]  1000 12838   765311   378915   378785      130         0  6107136   372784          1000 stress-ng-vm
+Nov 23 18:20:11 lab01-amina kernel: [  12848]  1000 12848   765311   379620   379490      130         0  6107136   129544          1000 stress-ng-vm
+Nov 23 18:20:11 lab01-amina kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=12838,uid=1000
+Nov 23 18:20:11 lab01-amina kernel: Out of memory: Killed process 12838 (stress-ng-vm) total-vm:3061244kB, anon-rss:1515140kB, file-rss:520kB, shmem-rss:0kB, UID:1000 pgtables:5964kB oom_score_adj:1000
+Nov 23 18:20:21 lab01-amina kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 23 18:20:21 lab01-amina kernel: CPU: 1 UID: 1000 PID: 12856 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 23 18:20:21 lab01-amina kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 23 18:20:21 lab01-amina kernel: Call Trace:
+Nov 23 18:20:21 lab01-amina kernel:  <TASK>
+Nov 23 18:20:21 lab01-amina kernel:  show_stack+0x49/0x60
+Nov 23 18:20:21 lab01-amina kernel:  dump_stack_lvl+0x5f/0x90
+Nov 23 18:20:21 lab01-amina kernel:  dump_stack+0x10/0x18
+Nov 23 18:20:21 lab01-amina kernel:  dump_header+0x48/0x1c7
+--
+Nov 23 18:20:21 lab01-amina kernel: [  12848]  1000 12848   765311   459167   459036      131         0  6107136   292533          1000 stress-ng-vm
+Nov 23 18:20:21 lab01-amina kernel: [  12856]  1000 12856   765311   282611   282481      130         0  4030464   209504          1000 stress-ng-vm
+Nov 23 18:20:21 lab01-amina kernel: [  12864]  1000 12864     4410      888      288      600         0    69632        0             0 date
+Nov 23 18:20:21 lab01-amina kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=12848,uid=1000
+Nov 23 18:20:21 lab01-amina kernel: Out of memory: Killed process 12848 (stress-ng-vm) total-vm:3061244kB, anon-rss:1836144kB, file-rss:524kB, shmem-rss:0kB, UID:1000 pgtables:5964kB oom_score_adj:1000
+Nov 23 18:20:27 lab01-amina kernel: bash invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Nov 23 18:20:27 lab01-amina kernel: CPU: 0 UID: 1000 PID: 12869 Comm: bash Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 23 18:20:27 lab01-amina kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 23 18:20:27 lab01-amina kernel: Call Trace:
+Nov 23 18:20:27 lab01-amina kernel:  <TASK>
+Nov 23 18:20:27 lab01-amina kernel:  show_stack+0x49/0x60
+Nov 23 18:20:27 lab01-amina kernel:  dump_stack_lvl+0x5f/0x90
+Nov 23 18:20:27 lab01-amina kernel:  dump_stack+0x10/0x18
+Nov 23 18:20:27 lab01-amina kernel:  dump_header+0x48/0x1c7
+--
+Nov 23 18:20:27 lab01-amina kernel: [  12856]  1000 12856   765311   329685   329555      130         0  6107136   422014          1000 stress-ng-vm
+Nov 23 18:20:27 lab01-amina kernel: [  12867]  1000 12867   765311   422408   422278      130         0  6107136    79913          1000 stress-ng-vm
+Nov 23 18:20:27 lab01-amina kernel: [  12869]  1000 12869     2214      254       86      168         0    57344      333             0 bash
+Nov 23 18:20:27 lab01-amina kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=12856,uid=1000
+Nov 23 18:20:27 lab01-amina kernel: Out of memory: Killed process 12856 (stress-ng-vm) total-vm:3061244kB, anon-rss:1318220kB, file-rss:520kB, shmem-rss:0kB, UID:1000 pgtables:5964kB oom_score_adj:1000
+Nov 23 18:20:39 lab01-amina kernel: kworker/0:0 invoked oom-killer: gfp_mask=0xdc0(GFP_KERNEL|__GFP_ZERO), order=0, oom_score_adj=0
+Nov 23 18:20:39 lab01-amina kernel: CPU: 0 UID: 0 PID: 12453 Comm: kworker/0:0 Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 23 18:20:39 lab01-amina kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 23 18:20:39 lab01-amina kernel: Workqueue: events drm_fb_helper_damage_work
+Nov 23 18:20:39 lab01-amina kernel: Call Trace:
+Nov 23 18:20:39 lab01-amina kernel:  <TASK>
+Nov 23 18:20:39 lab01-amina kernel:  show_stack+0x49/0x60
+Nov 23 18:20:39 lab01-amina kernel:  dump_stack_lvl+0x5f/0x90
+Nov 23 18:20:39 lab01-amina kernel:  dump_stack+0x10/0x18
+--
+Nov 23 18:20:39 lab01-amina kernel: [  12867]  1000 12867   765311   456731   456600      131         0  6107136   294969          1000 stress-ng-vm
+Nov 23 18:20:39 lab01-amina kernel: [  12872]  1000 12872   765311   275530   275399      131         0  3948544   206346          1000 stress-ng-vm
+Nov 23 18:20:39 lab01-amina kernel: [  12881]  1000 12881     4413      861      140      721         0    77824      176             0 sleep
+Nov 23 18:20:39 lab01-amina kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=12867,uid=1000
+Nov 23 18:20:39 lab01-amina kernel: Out of memory: Killed process 12867 (stress-ng-vm) total-vm:3061244kB, anon-rss:1826400kB, file-rss:524kB, shmem-rss:0kB, UID:1000 pgtables:5964kB oom_score_adj:1000
+Nov 23 18:20:43 lab01-amina kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 23 18:20:43 lab01-amina kernel: CPU: 0 UID: 1000 PID: 12882 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 23 18:20:43 lab01-amina kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 23 18:20:43 lab01-amina kernel: Call Trace:
+Nov 23 18:20:43 lab01-amina kernel:  <TASK>
+Nov 23 18:20:43 lab01-amina kernel:  show_stack+0x49/0x60
+Nov 23 18:20:43 lab01-amina kernel:  dump_stack_lvl+0x5f/0x90
+Nov 23 18:20:43 lab01-amina kernel:  dump_stack+0x10/0x18
+Nov 23 18:20:43 lab01-amina kernel:  dump_header+0x48/0x1c7
+--
+Nov 23 18:20:43 lab01-amina kernel: [  12872]  1000 12872   765311   412132   412002      130         0  6107136   339567          1000 stress-ng-vm
+Nov 23 18:20:43 lab01-amina kernel: [  12882]  1000 12882   765311   344168   344037      130         1  6107136   162037          1000 stress-ng-vm
+Nov 23 18:20:43 lab01-amina kernel: [  12883]  1000 12883     2214      250       82      168         0    57344      337             0 bash
+Nov 23 18:20:43 lab01-amina kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=12872,uid=1000
+Nov 23 18:20:43 lab01-amina kernel: Out of memory: Killed process 12872 (stress-ng-vm) total-vm:3061244kB, anon-rss:1648008kB, file-rss:520kB, shmem-rss:0kB, UID:1000 pgtables:5964kB oom_score_adj:1000
+Nov 23 18:20:56 lab01-amina kernel: bash invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=0
+Nov 23 18:20:56 lab01-amina kernel: CPU: 1 UID: 1000 PID: 2718 Comm: bash Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 23 18:20:56 lab01-amina kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 23 18:20:56 lab01-amina kernel: Call Trace:
+Nov 23 18:20:56 lab01-amina kernel:  <TASK>
+Nov 23 18:20:56 lab01-amina kernel:  show_stack+0x49/0x60
+Nov 23 18:20:56 lab01-amina kernel:  dump_stack_lvl+0x5f/0x90
+Nov 23 18:20:56 lab01-amina kernel:  dump_stack+0x10/0x18
+Nov 23 18:20:56 lab01-amina kernel:  dump_header+0x48/0x1c7
+--
+Nov 23 18:20:56 lab01-amina kernel: [  12905]     0 12905    10653      494      156      338         0    90112     1662             0 (udev-worker)
+Nov 23 18:20:56 lab01-amina kernel: [  12906]     0 12906    10653      481      143      338         0    90112     1675             0 (udev-worker)
+Nov 23 18:20:56 lab01-amina kernel: [  12907]     0 12907    10653      476      138      338         0    90112     1680             0 (udev-worker)
+Nov 23 18:20:56 lab01-amina kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=12882,uid=1000
+Nov 23 18:20:56 lab01-amina kernel: Out of memory: Killed process 12882 (stress-ng-vm) total-vm:3061244kB, anon-rss:1873200kB, file-rss:524kB, shmem-rss:0kB, UID:1000 pgtables:5964kB oom_score_adj:1000
+Nov 23 18:21:02 lab01-amina kernel: kworker/1:0 invoked oom-killer: gfp_mask=0xdc0(GFP_KERNEL|__GFP_ZERO), order=0, oom_score_adj=0
+Nov 23 18:21:02 lab01-amina kernel: CPU: 1 UID: 0 PID: 12813 Comm: kworker/1:0 Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 23 18:21:02 lab01-amina kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 23 18:21:02 lab01-amina kernel: Workqueue: events drm_fb_helper_damage_work
+Nov 23 18:21:02 lab01-amina kernel: Call Trace:
+Nov 23 18:21:02 lab01-amina kernel:  <TASK>
+Nov 23 18:21:02 lab01-amina kernel:  show_stack+0x49/0x60
+Nov 23 18:21:02 lab01-amina kernel:  dump_stack_lvl+0x5f/0x90
+Nov 23 18:21:02 lab01-amina kernel:  dump_stack+0x10/0x18
+--
+Nov 23 18:21:02 lab01-amina kernel: [  12886]  1000 12886   765311   336614   336484      130         0  6107136   415085          1000 stress-ng-vm
+Nov 23 18:21:02 lab01-amina kernel: [  12917]  1000 12917   765311   416222   416092      130         0  6107136    88783          1000 stress-ng-vm
+Nov 23 18:21:02 lab01-amina kernel: [  12918]  1000 12918     4410      894      288      606         0    73728        0             0 date
+Nov 23 18:21:02 lab01-amina kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=12886,uid=1000
+Nov 23 18:21:02 lab01-amina kernel: Out of memory: Killed process 12886 (stress-ng-vm) total-vm:3061244kB, anon-rss:1345936kB, file-rss:520kB, shmem-rss:0kB, UID:1000 pgtables:5964kB oom_score_adj:1000
+Nov 23 18:21:09 lab01-amina kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 23 18:21:09 lab01-amina kernel: CPU: 0 UID: 1000 PID: 12921 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 23 18:21:09 lab01-amina kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 23 18:21:09 lab01-amina kernel: Call Trace:
+Nov 23 18:21:09 lab01-amina kernel:  <TASK>
+Nov 23 18:21:09 lab01-amina kernel:  show_stack+0x49/0x60
+Nov 23 18:21:09 lab01-amina kernel:  dump_stack_lvl+0x5f/0x90
+Nov 23 18:21:09 lab01-amina kernel:  dump_stack+0x10/0x18
+Nov 23 18:21:09 lab01-amina kernel:  dump_header+0x48/0x1c7
+--
+Nov 23 18:21:09 lab01-amina kernel: [  12921]  1000 12921   765311   428548   428393      152         3  4141056    77416          1000 stress-ng-vm
+Nov 23 18:21:09 lab01-amina kernel: [  12925]     0 12925    10589      878      532      346         0    86016      482             0 (udev-worker)
+Nov 23 18:21:09 lab01-amina kernel: [  12928]  1000 12928     4413     1028      315      713         0    77824        0             0 sleep
+Nov 23 18:21:09 lab01-amina kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=12917,uid=1000
+Nov 23 18:21:09 lab01-amina kernel: Out of memory: Killed process 12917 (stress-ng-vm) total-vm:3061244kB, anon-rss:1300752kB, file-rss:608kB, shmem-rss:12kB, UID:1000 pgtables:5964kB oom_score_adj:1000
