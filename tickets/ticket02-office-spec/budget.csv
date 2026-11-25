@@ -1,0 +1,46 @@
+role,component,model,price_kzt,source,date
+accountant,CPU,"AMD Ryzen 5 8500G (AM5, Radeon 740M iGPU)",63085,https://kaspi.kz/shop/search/?text=AMD%20Ryzen%205%208500G,2026-11-25
+accountant,Motherboard,"Gigabyte B650M D3HP (AM5, DDR5, 4 DIMM, M.2 PCIe 4.0)",75890,https://kaspi.kz/shop/search/?text=Gigabyte%20B650M%20D3HP,2026-11-25
+accountant,Memory,Kingston FURY Beast DDR5-5600 2x8 GB,120000,https://kaspi.kz/shop/search/?text=Kingston%20FURY%20Beast%20DDR5-5600%202x8%20GB,2026-11-25
+accountant,SSD,Kingston NV3 1 TB NVMe M.2,27300,https://kaspi.kz/shop/search/?text=Kingston%20NV3%201%20TB%20NVMe%20M.2,2026-11-25
+accountant,PSU,DeepCool PK550D 550W 80+ Bronze,23500,https://shop.kz/offer/blok-pitaniya-atx-550-w-deepcool-pf550/,2026-11-25
+accountant,Case,DeepCool CC360,29400,https://kaspi.kz/shop/search/?text=DeepCool%20CC360,2026-11-25
+accountant,Monitor,Xiaomi Mi Monitor A27Qi 27in QHD IPS,85000,https://kaspi.kz/shop/search/?text=Xiaomi%20Mi%20Monitor%20A27Qi%2027in%20QHD%20IPS,2026-11-25
+accountant,UPS,APC Back-UPS BX650MI 650VA,52500,https://kaspi.kz/shop/search/?text=APC%20Back-UPS%20BX650MI%20650VA,2026-11-25
+accountant,Keyboard+mouse,Logitech MK270 wireless set,15640,https://kaspi.kz/shop/search/?text=Logitech%20MK270%20wireless%20set,2026-11-25
+accountant,OS,Windows 11 Pro OEM 64-bit (license),46900,https://kaspi.kz/shop/search/?text=Windows%2011%20Pro%20OEM%2064-bit,2026-11-25
+accountant,TOTAL,,539215,,
+sales,CPU,"AMD Ryzen 5 8500G (AM5, Radeon 740M iGPU)",63085,https://kaspi.kz/shop/search/?text=AMD%20Ryzen%205%208500G,2026-11-25
+sales,Motherboard,"Gigabyte B650M D3HP (AM5, DDR5, 4 DIMM, M.2 PCIe 4.0)",75890,https://kaspi.kz/shop/search/?text=Gigabyte%20B650M%20D3HP,2026-11-25
+sales,Memory,Kingston FURY Beast DDR5-5600 2x16 GB,119600,https://kaspi.kz/shop/search/?text=Kingston%20FURY%20Beast%20DDR5-5600%202x16%20GB,2026-11-25
+sales,SSD,Kingston NV3 1 TB NVMe M.2,27300,https://kaspi.kz/shop/search/?text=Kingston%20NV3%201%20TB%20NVMe%20M.2,2026-11-25
+sales,PSU,DeepCool PK550D 550W 80+ Bronze,23500,https://shop.kz/offer/blok-pitaniya-atx-550-w-deepcool-pf550/,2026-11-25
+sales,Case,DeepCool CC360,29400,https://kaspi.kz/shop/search/?text=DeepCool%20CC360,2026-11-25
+sales,Monitor,LG 24MR400 24in FHD IPS,43000,https://itmag.kz/p/127461-23-8-chernyj-ips-1920-x-1080-1ms-16-9/,2026-11-25
+sales,Webcam,Logitech C270 HD,9000,https://kaspi.kz/shop/search/?text=Logitech%20C270%20HD,2026-11-25
+sales,Headset,Logitech H390 USB,13000,https://kaspi.kz/shop/search/?text=Logitech%20H390%20USB,2026-11-25
+sales,Keyboard+mouse,Logitech MK270 wireless set,15640,https://kaspi.kz/shop/search/?text=Logitech%20MK270%20wireless%20set,2026-11-25
+sales,OS,Windows 11 Pro OEM 64-bit (license),46900,https://kaspi.kz/shop/search/?text=Windows%2011%20Pro%20OEM%2064-bit,2026-11-25
+sales,TOTAL,,466315,,
+webdev,CPU,"AMD Ryzen 7 7700 (AM5, 8 cores, box cooler)",103000,https://kaspi.kz/shop/search/?text=AMD%20Ryzen%207%207700,2026-11-25
+webdev,Motherboard,"MSI B650 GAMING PLUS WIFI (AM5, DDR5, 4 DIMM, 2x M.2 PCIe 4.0)",170000,https://kaspi.kz/shop/search/?text=MSI%20B650%20GAMING%20PLUS%20WIFI,2026-11-25
+webdev,Memory,Kingston FURY Beast DDR5-5600 2x16 GB,119600,https://kaspi.kz/shop/search/?text=Kingston%20FURY%20Beast%20DDR5-5600%202x16%20GB,2026-11-25
+webdev,SSD,Kingston KC3000 1 TB NVMe PCIe 4.0,130000,https://kaspi.kz/shop/search/?text=Kingston%20KC3000%201%20TB%20NVMe%20PCIe%204.0,2026-11-25
+webdev,PSU,DeepCool PK650D 650W 80+ Bronze,30000,https://kaspi.kz/shop/search/?text=DeepCool%20PK650D%20650W%2080%2B%20Bronze,2026-11-25
+webdev,Case,DeepCool CC560,29400,https://kaspi.kz/shop/search/?text=DeepCool%20CC560,2026-11-25
+webdev,Monitor,Xiaomi Mi Monitor A27Qi 27in QHD IPS,85000,https://kaspi.kz/shop/search/?text=Xiaomi%20Mi%20Monitor%20A27Qi%2027in%20QHD%20IPS,2026-11-25
+webdev,Keyboard+mouse,Logitech MK270 wireless set,15460,https://kaspi.kz/shop/search/?text=Logitech%20MK270%20wireless%20set,2026-11-25
+webdev,OS,"Ubuntu 24.04 LTS (free, GPL)",0,https://ubuntu.com/download/desktop,2026-11-25
+webdev,TOTAL,,682460,,
+designer,CPU,"AMD Ryzen 5 7600 (AM5, 6 cores, box cooler)",102000,https://kaspi.kz/shop/search/?text=AMD%20Ryzen%205%207600,2026-11-25
+designer,Motherboard,"MSI B650 GAMING PLUS WIFI (AM5, DDR5, 4 DIMM, 2x M.2 PCIe 4.0)",170000,https://kaspi.kz/shop/search/?text=MSI%20B650%20GAMING%20PLUS%20WIFI,2026-11-25
+designer,Memory,Kingston FURY Beast DDR5-5600 2x16 GB,119600,https://kaspi.kz/shop/search/?text=Kingston%20FURY%20Beast%20DDR5-5600%202x16%20GB,2026-11-25
+designer,SSD,Kingston KC3000 1 TB NVMe PCIe 4.0,55000,https://kaspi.kz/shop/search/?text=Kingston%20KC3000%201%20TB%20NVMe%20PCIe%204.0,2026-11-25
+designer,GPU,MSI GeForce RTX 5060 VENTUS 2X 8 GB,343700,https://kaspi.kz/shop/search/?text=MSI%20GeForce%20RTX%205060%20VENTUS%202X%208%20GB,2026-11-25
+designer,PSU,DeepCool PK650D 650W 80+ Bronze,30000,https://kaspi.kz/shop/search/?text=DeepCool%20PK650D%20650W%2080%2B%20Bronze,2026-11-25
+designer,Case,DeepCool CC560,25000,https://kaspi.kz/shop/search/?text=DeepCool%20CC560,2026-11-25
+designer,Monitor,ASUS ProArt PA278QV 27in QHD IPS 100% sRGB calibrated,189000,https://kaspi.kz/shop/search/?text=ASUS%20ProArt%20PA278QV%2027in%20QHD%20IPS%20100%25%20sRGB%20calibrated,2026-11-25
+designer,Keyboard+mouse,Logitech MK270 wireless set,15460,https://kaspi.kz/shop/search/?text=Logitech%20MK270%20wireless%20set,2026-11-25
+designer,OS,Windows 11 Pro OEM 64-bit (license),46900,https://kaspi.kz/shop/search/?text=Windows%2011%20Pro%20OEM%2064-bit,2026-11-25
+designer,TOTAL,,1096660,,
+ALL,GRAND TOTAL,,2784650,,

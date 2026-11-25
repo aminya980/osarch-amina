@@ -79,3 +79,4 @@ The result is empty because I did not put memory pressure on the Windows guest, 
 - **The lab is written for VirtualBox, but I use VMware:** VBoxService does not exist, so I used vmtoolsd; snapshots are under VM → Snapshot.
 - **The Ubuntu PID changed** (1238 from `pgrep` → 1237 in htop) because the VM was restarted in between, so I had to look it up again.
 - **Process Explorer's lower pane took the whole window** at first and hid the process tree; I had to drag the divider down to show both.
+````

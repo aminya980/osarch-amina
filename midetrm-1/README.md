@@ -36,7 +36,6 @@
 2. I added a 1 GB disk (VM Settings → Add → Hard Disk).
    Result: it appears in the VM’s device list.
 3. lsblk: I expected a new 1G disk sdb with no partitions (`sda` is the system disk). This confirms the device name before I write to it.
-   Result: [paste output]
 4. sudo parted /dev/sdb —script mklabel gpt mkpart data ext4 1MiB 100%: creates a GPT table and one partition. It prints nothing on success; lsblk should then show sdb1 of about 1G.
    Result: [FAILED: “sudo: Authentication failed”. I retried with the correct password / the problem was ___.]
 5. sudo mkfs.ext4 /dev/sdb1: expected “Writing superblocks and filesystem accounting information: done”.
@@ -44,14 +43,13 @@
 7. sudo blkid /dev/sdb1: gives UUID=“...” TYPE=“ext4”. I copied the UUID.
 8. echo ‘UUID=<real-uuid> /data ext4 defaults,nofail 0 2’ | sudo tee -a /etc/fstab: it prints the line back. I checked with tail -n 2 /etc/fstab.
 9. sudo umount /data && sudo mount -a: no output means no error in fstab. findmnt /data; df -h /data show it mounted.
-10. sudo reboot, then findmnt /data: still mounted, which proves it survives a reboot. [Optional: ls /data shows lost+found.]
+10. sudo reboot, then findmnt /data: still mounted, which proves it survives a reboot.
 
 **Justification**:
 - GPT: supports disks over 2 TB and 128 partitions, and keeps a backup header. MBR is limited to 2 TB and 4 primary partitions.
 - UUID in fstab: /dev/sdX names can change when disks are added or reordered; the UUID stays with the filesystem.
 - Alternatives: LVM is flexible but more complex. A label or a systemd mount unit also works.
 - nofail: a mount error won’t stop the boot.
------
 - Why GPT: it handles disks over 2 TB, allows 128 partitions, keeps a backup header, and is the UEFI standard. MBR is limited to 2 TB and 4 primary partitions.
 - Why UUID: /dev/sdX names can change when disks are added or reordered. The UUID belongs to the filesystem.
 - Alternatives and trade-offs: LVM is flexible but adds complexity. A label or a systemd mount unit also works.
